@@ -10,12 +10,12 @@ export default function Layout() {
             <SidebarProvider>
                 <NavigationSidebar />
                 <div className="w-full p-2">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between h-12">
                         <SidebarTrigger />
-                        <Input placeholder="Search city"/>
+                        <Input placeholder="Search city..." className="max-w-sm w-full" />
                         <ThemeToggle />
                     </div>
-                    <main className='w-full h-full'>
+                    <main className='w-full'>
                         <Outlet />
                     </main>
                     </div>

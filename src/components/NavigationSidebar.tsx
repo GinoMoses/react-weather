@@ -1,4 +1,4 @@
-import { Home, Bookmark, CircleQuestionMark} from "lucide-react"
+import { Home, Bookmark, CircleQuestionMark } from "lucide-react"
 
 import {
   Sidebar,
@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/sidebar"
 import { NavLink } from "react-router-dom"
 
-// Menu items.
 const items = [
   {
     title: "Home",
@@ -36,18 +35,31 @@ export function NavigationSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Site</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <NavLink to={item.url}>
-                        {item.title}
+                      <item.icon />
+                      {item.title}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Language</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <button>English</button>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
