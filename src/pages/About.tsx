@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Atom, Cloud, Info, Wrench } from "lucide-react";
+import { Cloud, Info, Wrench } from "lucide-react";
 export default function About() {
     return (
         <div className="flex justify-center items-center p-4">
