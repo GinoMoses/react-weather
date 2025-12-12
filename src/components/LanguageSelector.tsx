@@ -14,6 +14,7 @@ export default function LanguageSelector() {
         { code: "en", label: "English" },
         { code: "pl", label: "Polski" },
         { code: "cz", label: "Čeština" },
+        { code: "de", label: "Deutsche" }
     ];
 
     function changeLang(lang: string) {
