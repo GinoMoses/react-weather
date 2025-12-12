@@ -14,5 +14,15 @@
     "sunset": "Sunset",
     "hours_of_daylight": "Hours of daylight",
     "timezone": "Timezone",
-    "empty_bookmarks": "Bookmarks are empty"
+    "empty_bookmarks": "Bookmarks are empty",
+    "not_found": "Page not found",
+    "not_exist": "The page you are looking for does not exist.",
+    "back_home": "Back to home page",
+
+    "about.title": "About this app",
+    "about.section1": "This weather app was build as a school project using technologies like <strong>React</strong>, <strong>TypeScript</strong> and <strong>Tailwind</strong>. It provides real-time weather information, forecasts, and allows to bookmark locations. The slick UI was built using components provided by <strong>shadcn/ui</strong>",
+    "about.weather": "Weather",
+    "about.weather.content": "Weather data is sourced from the <strong>Openweather API</strong>",
+    "about.technologies": "Technologies used",
+    "about.author": "Made by Damian Gorol"
 }

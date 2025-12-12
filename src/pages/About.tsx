@@ -1,38 +1,35 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cloud, Info, Wrench } from "lucide-react";
+import { useTranslation, Trans } from "react-i18next";
+
 export default function About() {
+    const { t } = useTranslation();
+
     return (
         <div className="flex justify-center items-center p-4">
             <Card className="max-w-2xl w-full p-4">
                 <CardHeader>
                     <CardTitle className="text-3xl font-bold flex items-center gap-2">
-                        <Info size={30} /> <p>About this app</p>
+                        <Info size={30} /> {t("about.title")}
                     </CardTitle>
                 </CardHeader>
                 <CardContent>
                     <div>
                         <p>
-                            This weather app was build as a school project using
-                            technologies like
-                            <strong> React</strong>, <strong>TypeScript</strong>{" "}
-                            and <strong>Tailwind</strong>. It provides real-time
-                            weather information, forecasts, and allows to
-                            bookmark locations. The slick UI was built using
-                            components provided by <strong>shadcn/ui</strong>.
+                            <Trans i18nKey="about.section1" />
                         </p>
                     </div>
                     <div>
                         <h2 className="text-xl font-semibold mt-4 mb-2 flex items-center gap-2">
-                            <Cloud size={25} /> <p>Weather</p>
+                            <Cloud size={25} /> <p>{t("about.weather")}</p>
                         </h2>
                         <p>
-                            Weather data is sourced from the{" "}
-                            <strong>Openweather API</strong>
+                            <Trans i18nKey="about.weather.content" />
                         </p>
                     </div>
                     <div>
                         <h2 className="text-xl font-semibold mt-4 mb-2 flex items-center gap-2">
-                            <Wrench /> <p>Technologies used</p>
+                            <Wrench /> <p>{t("about.technologies")}</p>
                         </h2>
                         <ul className="list-disc list-inside text-md font-bold">
                             <a href="https://react.dev/">
@@ -57,7 +54,7 @@ export default function About() {
                     </div>
                     <div className="pt-4 border-t mt-6">
                         <p className="text-center text-muted-foreground">
-                            Made by Damian Gorol
+                            {t("about.author")}
                         </p>
                     </div>
                 </CardContent>

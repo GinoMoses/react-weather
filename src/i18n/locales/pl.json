@@ -14,5 +14,15 @@
     "sunset": "Zachód",
     "hours_of_daylight": "Swiatło dzienne przez",
     "timezone": "Strefa czasowa",
-    "empty_bookmarks": "Brak zapisanych"
+    "empty_bookmarks": "Brak zapisanych",
+    "not_found": "Nie znaleziono strony",
+    "not_exist": "Strona, której szukasz nie istnieje",
+    "back_home": "Wróć do strony głownej",
+
+    "about.title": "O tej aplikacji",
+    "about.section1": "Ta aplikacja pogodowa została stworzona na potrzeby projektu szkolengo z użyciem technologii takich jak <strong>React</strong>, <strong>Typescript</strong> i <strong>Tailwind</strong>. Umożliwia ona dostęp do aktualnych danych pogodowych, prognozy oraz pozwala na zapisywanie lokalizacji. UI zostało zbudowane z użyciem komponentów udostępnionych przez <strong>shadcn/ui</strong>",
+    "about.weather": "Pogoda",
+    "about.weather.content": "Dane pogodowe pobierane są z <strong>Openweather API</strong>",
+    "about.technologies": "Użyte technologie",
+    "about.author": "Autor: Damian Gorol"
 }
