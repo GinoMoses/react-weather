@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Input } from "./ui/input";
 import { Card } from "./ui/card";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export interface SearchResult {
     name: string;
@@ -23,6 +24,8 @@ export default function SearchBar({
     const [query, setQuery] = useState("");
     const [suggestions, setSuggestions] = useState<SearchResult[]>([]);
     const [isFocused, setIsFocused] = useState(false);
+
+    const { t } = useTranslation();
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -74,7 +77,7 @@ export default function SearchBar({
                 onChange={(e) => setQuery(e.target.value)}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setTimeout(() => setIsFocused(false), 150)}
-                placeholder="Search city..."
+                placeholder={t("search_placeholder")}
                 className="max-w-sm w-full"
             />
             {isFocused && suggestions.length > 0 && (

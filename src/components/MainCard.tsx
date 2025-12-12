@@ -11,6 +11,7 @@ import { MapPinned } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import BookmarkToggle from "./BookmarkToggle";
 import { type Bookmark } from "@/hooks/useBookmarks";
+import { useTranslation } from "react-i18next";
 
 interface MainCardProps {
     data?: any;
@@ -21,6 +22,8 @@ interface MainCardProps {
 export default function MainCard({ data, location, bookmark }: MainCardProps) {
     const isBookmarkMode = !!bookmark;
     const isMobile = useIsMobile();
+
+    const { t } = useTranslation();
 
     const ConvertedIcon =
         OpenWeatherIconsToLucide[
@@ -71,7 +74,7 @@ export default function MainCard({ data, location, bookmark }: MainCardProps) {
                     </span>
                 </div>
                 <p>
-                    Feels like {Math.round(information.feelsLike)}°C.{" "}
+                    {t("feels_like")} {Math.round(information.feelsLike)}°C.{" "}
                     {information.description.slice(0, 1).toUpperCase() +
                         information.description.slice(1)}
                     .
@@ -80,9 +83,15 @@ export default function MainCard({ data, location, bookmark }: MainCardProps) {
             {!isMobile && !isBookmarkMode && (
                 <CardFooter>
                     <CardDescription>
-                        <p>Humidity: {information.humidity}% </p>
-                        <p>Wind: {information.windSpeed} m/s </p>
-                        <p>Pressure: {information.pressure} hPa</p>
+                        <p>
+                            {t("humidity")}: {information.humidity}%{" "}
+                        </p>
+                        <p>
+                            {t("wind")}: {information.windSpeed} m/s{" "}
+                        </p>
+                        <p>
+                            {t("pressure")}: {information.pressure} hPa
+                        </p>
                         <p>
                             Lat: {information.lat} Lon: {information.lon}
                         </p>

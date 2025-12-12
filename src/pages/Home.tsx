@@ -8,11 +8,14 @@ import TemperatureChart from "@/components/TemperatureChart";
 import { type SearchResult } from "@/components/SearchBar";
 import type { useBookmarksReturn } from "@/hooks/useBookmarks";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useTranslation } from "react-i18next";
 
 const units = "metric";
 const key = import.meta.env.VITE_API_KEY;
 
 export default function Home() {
+    const { i18n } = useTranslation();
+
     const [data, setData] = useState<any>(null);
     const [forecastData, setForecastData] = useState<any>(null);
 
@@ -37,8 +40,8 @@ export default function Home() {
 
     useEffect(() => {
         if (activeLocation) {
-            const redirectedUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${activeLocation.lat}&lon=${activeLocation.lon}&units=${units}&appid=${key}`;
-            const redirectedUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${activeLocation.lat}&lon=${activeLocation.lon}&units=${units}&appid=${key}`;
+            const redirectedUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${activeLocation.lat}&lon=${activeLocation.lon}&units=${units}&lang=${i18n.language}&appid=${key}`;
+            const redirectedUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${activeLocation.lat}&lon=${activeLocation.lon}&units=${units}&lang=${i18n.language}&appid=${key}`;
 
             fetch(redirectedUrl)
                 .then((response) => response.json())
@@ -57,7 +60,7 @@ export default function Home() {
                 .catch((err) => console.error(`ERROR: ${err}`));
             return;
         }
-    }, [selectedLocation, routerState]);
+    }, [selectedLocation, routerState, i18n.language]);
 
     const chartData = forecastData
         ? forecastData.list.slice(0, 8).map((entry: any) => ({

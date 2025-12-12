@@ -8,6 +8,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 import { ThemeProvider } from "./components/ThemeProvider";
+import "./i18n";
 
 let router = createBrowserRouter([
     {

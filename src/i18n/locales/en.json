@@ -1,0 +1,18 @@
+{
+    "search_placeholder": "Search city...",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "pressure": "Pressure",
+    "feels_like": "Feels like",
+    "home": "Home",
+    "bookmarks": "Bookmarks",
+    "about": "About",
+    "temperature": "Temperature",
+    "site": "Site",
+    "language": "Language",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "hours_of_daylight": "Hours of daylight",
+    "timezone": "Timezone",
+    "empty_bookmarks": "Bookmarks are empty"
+}

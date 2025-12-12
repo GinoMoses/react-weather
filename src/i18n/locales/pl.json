@@ -1,0 +1,18 @@
+{
+    "search_placeholder": "Wyszukaj miasto...",
+    "humidity": "Wilgotność",
+    "wind": "Wiatr",
+    "pressure": "Ciśnienie",
+    "feels_like": "Odczuwalna",
+    "home": "Strona Główna",
+    "bookmarks": "Zapisane",
+    "about": "O aplikacji",
+    "temperature": "Temperatura",
+    "site": "Strona",
+    "language": "Język",
+    "sunrise": "Wschód",
+    "sunset": "Zachód",
+    "hours_of_daylight": "Swiatło dzienne przez",
+    "timezone": "Strefa czasowa",
+    "empty_bookmarks": "Brak zapisanych"
+}
